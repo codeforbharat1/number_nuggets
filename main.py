@@ -18,15 +18,15 @@ def get_merchant_login():
     data = res.read()
     print(data.decode("utf-8"))
 
-@app.route('/get-merchant')
-def get_merchant_login():
-    conn = http.client.HTTPSConnection("v1-api.swiftchat.ai")
-    payload = "{   \n    \"name\": \"Test Merchant\",\n    \"email\": \"test.merchant@test.com\",\n    \"password\": \"Password@1234\"\n}"
-    headers = {}
-    conn.request("POST", "/api/merchants", payload, headers)
-    res = conn.getresponse()
-    data = res.read()
-    print(data.decode("utf-8"))
+#@app.route('/get-merchant')
+#def get_merchant_login():
+    #conn = http.client.HTTPSConnection("v1-api.swiftchat.ai")
+    #payload = "{   \n    \"name\": \"Test Merchant\",\n    \"email\": \"test.merchant@test.com\",\n    \"password\": \"Password@1234\"\n}"
+    #headers = {}
+    #conn.request("POST", "/api/merchants", payload, headers)
+    #res = conn.getresponse()
+    #data = res.read()
+    #print(data.decode("utf-8"))
 
 @app.route('/merchant-details')
 def get_merchant_details():
