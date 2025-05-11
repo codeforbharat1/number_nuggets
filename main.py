@@ -28,7 +28,7 @@ def send_text_message():
     data = res.read()
     print(data.decode("utf-8"))
 
-@app.route('/create-Text-Template')
+@app.route('/create-text-template')
 def create_text_template():
     conn = http.client.HTTPSConnection("v1-api.swiftchat.ai")
     payload = "{\n    \"name\": \"Test Template\",\n    \"category\": \"Marketing\",\n    \"language\": \"en\",\n    \"components\": [\n        {\n            \"type\": \"body\",\n            \"parameters\": [\n                {\n                    \"type\": \"text\",\n                    \"text\": \"Hello\"\n                }\n            ]\n        }\n    ]\n}"
