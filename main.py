@@ -18,15 +18,25 @@ def get_merchant_login():
     data = res.read()
     print(data.decode("utf-8"))
 
-#@app.route('/get-merchant')
-#def get_merchant_login():
-    #conn = http.client.HTTPSConnection("v1-api.swiftchat.ai")
-    #payload = "{   \n    \"name\": \"Test Merchant\",\n    \"email\": \"test.merchant@test.com\",\n    \"password\": \"Password@1234\"\n}"
-    #headers = {}
-    #conn.request("POST", "/api/merchants", payload, headers)
-    #res = conn.getresponse()
-    #data = res.read()
-    #print(data.decode("utf-8"))
+@app.route('/send-text-message')
+def send_text_message():
+    conn = http.client.HTTPSConnection("v1-api.swiftchat.ai")
+    payload = "{\n    \"to\": \"<recepient-mobile>\",\n    \"type\": \"text\",\n    \"text\": {\n        \"body\": \"Hello\"\n    }\n}"
+    headers = {}
+    conn.request("POST", "/api/bots/<bot-id>/messages", payload, headers)
+    res = conn.getresponse()
+    data = res.read()
+    print(data.decode("utf-8"))
+
+@app.route('/create-Text-Template')
+def create_text_template():
+    conn = http.client.HTTPSConnection("v1-api.swiftchat.ai")
+    payload = "{\n    \"name\": \"Test Template\",\n    \"category\": \"Marketing\",\n    \"language\": \"en\",\n    \"components\": [\n        {\n            \"type\": \"body\",\n            \"parameters\": [\n                {\n                    \"type\": \"text\",\n                    \"text\": \"Hello\"\n                }\n            ]\n        }\n    ]\n}"
+    headers = {}
+    conn.request("POST", "/api/bots/<bot-id>/messages/templates/text", payload, headers)
+    res = conn.getresponse()
+    data = res.read()
+    print(data.decode("utf-8"))
 
 @app.route('/merchant-details')
 def get_merchant_details():
@@ -177,7 +187,7 @@ def delete_bot():
 if __name__ == '__main__':
     
     #Testing Merchant API
-    get_merchant_login
+    get_merchant_login()
     get_merchant_details()
 
     #Testing Bot API
@@ -189,6 +199,8 @@ if __name__ == '__main__':
     get_shareable_link()
     update_configuration()
     update_webhook_url()
+    send_text_message()
+    create_text_template() 
     #delete_bot()
     
     #Testing Numbers API
