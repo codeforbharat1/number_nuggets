@@ -3,3 +3,6 @@ https://swiftchat.ai/swiftchatapp/swiftchat-platform-for-developers-and-business
 https://github.com/zanaaziz/numbers-api/blob/master/script.py
 http://numbersapi.com/42
 https://documenter.getpostman.com/view/20587790/UyrGCuhH#ecd8fd49-96ab-4ff4-8216-57539e20f742
+Bot store (Web browser version): https://web.convegenius.ai/home
+Youtube tutorial: https://www.youtube.com/watch?v=isN3z5FZcWg&t=85s
+Log in to Swiftchat Business Manager: https://dashboard.swiftchat.ai/signin
