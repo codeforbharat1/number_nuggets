@@ -1,3 +1,21 @@
+# NumNuggets
+# 🧩 Core Features
+📬 Fun Fact of the day
+● Each morning or afternoon, the bot sends one captivating fact tied to a number.
+📬 Surprise me
+● User clicks on this button displayed on UI and the bot sends one captivating fact tied to a number.
+📬 Number Trivia
+● User enters a number of his choice on UI and the bot sends one captivating fact tied to the number.
+
+# Problem Statement
+For many students, numbers feel like lifeless equations — things to memorize, not explore. But what if we could breathe wonder into math by connecting numbers to stories, science, and surprises? Number Nuggets is a chatbot that turns every number into a fascinating fact. Whether it’s the birthday of a freedom fighter, the distance between Earth and Mars, or a quirky math property, the bot delivers one intriguing nugget a day — transforming numeracy into an adventure. Designed for middle and high school learners, this idea turns dry digits into memorable experiences. With a conversational interface and trivia-style interaction, it helps students build number sense, cross-subject awareness, and a lasting sense of curiosity.
+# 🛠️The Challenge
+Build a chatbot that delivers a daily dose of number trivia, pulling facts from the Numbers API — and optionally mixing in custom, India-centric number stories for cultural context. The experience should feel delightful, lightweight, and surprise-filled — like opening a fortune cookie for your brain. The goal is to spark learning through awe — not through lessons, but through delightful patterns, coincidences, and connections hidden in numbers.
+
+## Use cases:
+
+● Example: “🔢 1729 is not just a number — it’s the famous Hardy–Ramanujan number! It’s the smallest number expressible as the sum of two cubes in two different ways.”
+
 # Chat Bot API
 
 A Node.js backend service for handling chatbot interactions using SwiftChat's bot platform, with Redis and PostgreSQL integration.
