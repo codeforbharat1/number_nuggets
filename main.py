@@ -8,6 +8,77 @@ app = Flask(__name__)
 def home():
     return "Welcome to the Python Mobile App!"
 
+@app.route("/Signup")
+def signup():
+    conn = http.client.HTTPSConnection("v1-api.swiftchat.ai")
+    payload = "{   \n    \"name\": \"UBS Merchant\",\n    \"email\": \"alokdiwan@gmail.com\",\n    \"password\": \"Password@1234\"\n}"
+    headers = {}
+    conn.request("POST", "/api/merchants", payload, headers)
+    res = conn.getresponse()
+    data = res.read()
+    print(data.decode("utf-8"))
+
+@app.route("/Create-Mini-App")  
+def create_mini_app():
+    conn = http.client.HTTPSConnection("v1-api.swiftchat.ai")
+    payload = "{\n    \"email\": \"<mini-app-email>\",\n    \"configuration\": {\n        \"type\": \"WEB\",\n        \"name\": \"<mini-app-name>\",\n        \"category\": \"<category of the mini-app>\"\n    }\n}"
+    headers = {}
+    conn.request("POST", "/api/mini-apps", payload, headers)
+    res = conn.getresponse()
+    data = res.read()
+    print(data.decode("utf-8"))
+
+@app.route('/verify-mini-app')
+def verify_mini_app():
+    conn = http.client.HTTPSConnection("v1-api.swiftchat.ai")
+    url = "https://v1-api.swiftchat.ai/api/mini-apps/verify"
+    payload = "{\n    \"email\": \"abc@xyz.com\",\n    \"otp\": \"123456\",\n    \"country_code\": \"IN\"\n}"
+    headers = {}
+    conn.request("POST", "/api/mini-apps/verify", payload, headers)
+    res = conn.getresponse()
+    data = res.read()
+    print(data.decode("utf-8"))
+
+@app.route('/get-mini-apps')
+def get_mini_app_details():
+    conn = http.client.HTTPSConnection("v1-api.swiftchat.ai")
+    payload = ''
+    headers = {}
+    conn.request("GET", "/api/merchants/<merchant-id>/mini-apps", payload, headers)
+    res = conn.getresponse()
+    data = res.read()
+    print(data.decode("utf-8"))
+
+@app.route('/mini-apps/configuration')
+def get_mini_app_details_by_id():
+    conn = http.client.HTTPSConnection("v1-api.swiftchat.ai")
+    payload = ''
+    headers = {}
+    conn.request("GET", "/api/mini-apps/{{Mini-App-ID}}/configuration", payload, headers)
+    res = conn.getresponse()
+    data = res.read()
+    print(data.decode("utf-8"))
+
+@app.route('/mini-apps/configuration/update')   
+def update_mini_app_configuration():
+    conn = http.client.HTTPSConnection("v1-api.swiftchat.ai")
+    payload = "{\n    \"name\": \"<mini-app-name>\",\n    \"category\": \"<mini-app-category>\",\n    \"description\": \"<description>\",\n    \"customer_support_email\": \"<support-email>\",\n    \"customer_support_phone\": \"<support-phone-number>\",\n    \"launch_url\": \"https://xyzabc.com\"\n}"
+    headers = {}
+    conn.request("PATCH", "/api/mini-apps/{{Mini-App-ID}}/configuration", payload, headers)
+    res = conn.getresponse()
+    data = res.read()
+    print(data.decode("utf-8"))
+
+@app.route('/mini-apps/get-shareable-link')
+def get_mini_app_shareable_link():
+    conn = http.client.HTTPSConnection("v1-api.swiftchat.ai")
+    payload = ''
+    headers = {}
+    conn.request("GET", "/api/mini-apps/{{Mini-App-ID}}/shareable-link", payload, headers)
+    res = conn.getresponse()
+    data = res.read()
+    print(data.decode("utf-8"))
+
 @app.route('/merchant-login')
 def get_merchant_login():
     conn = http.client.HTTPSConnection("v1-api.swiftchat.ai")
@@ -202,6 +273,14 @@ if __name__ == '__main__':
     send_text_message()
     create_text_template() 
     #delete_bot()
+
+    #Testing Mini-app API
+    create_mini_app()
+    verify_mini_app()
+    get_mini_app_details()
+    get_mini_app_details_by_id()
+    update_mini_app_configuration()
+    get_mini_app_shareable_link()
     
     #Testing Numbers API
     ##conn = http.client.HTTPSConnection("v1-api.swiftchat.ai")
