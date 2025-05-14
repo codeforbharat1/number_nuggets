@@ -1,0 +1,40 @@
+{
+    "to": "<recepient-mobile>",
+    "type": "button",
+    "button": {
+        "body": {
+            "type": "text",
+            "text": {
+                "body": "Please select a option"
+            }
+        },
+        "buttons": [
+            {
+                "icon": "<button-icon>",
+                "type": "<button-type>",
+                "body": "Daily Number Nugget",
+                "reply": "<user-click-response>"
+            },
+            {
+                "icon": "<button-icon>",
+                "type": "<button-type>",
+                "body": "Explore by Number",
+                "reply": "<user-click-response>"
+            },
+          {
+                "icon": "<button-icon>",
+                "type": "<button-type>",
+                "body": "Surprise Me! Mode",
+                "reply": "<user-click-response>"
+            },
+            {
+                "icon": "<button-icon>",
+                "type": "<button-type>",
+                "body": "Date-Based Facts",
+                "reply": "<user-click-response>"
+            },
+        ],
+        "allow_custom_response": false
+    },
+    "rating_type": "thumb"
+}
