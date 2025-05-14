@@ -79,13 +79,15 @@ This will create the necessary tables and populate them with dummy data.
 
 ## ✅ Setup Complete
 
-## 📹 Demo Video
-
-[▶️ Watch the demo](https://drive.google.com/file/d/1629PmJgL7xZj0qyiAROf3BTUFredwbYW/view?usp=sharing)
-
-## Swiftchat postman
-
-[📋 View Postman Documentation](https://documenter.getpostman.com/view/20587790/UyrGCuhH#ecd8fd49-96ab-4ff4-8216-57539e20f742)
+## 📹 References
+SwiftChat UI for users: https://web.convegenius.ai/home
+SwiftChat guide: 
+https://swiftchat-developer-guide.readthedocs.io/en/latest/hello_world.html
+https://www.youtube.com/watch?v=isN3z5FZcWg&t=85s
+NgRok download and setup: 
+https://ngrok.com/downloads/mac-os?tab=download
+https://dashboard.ngrok.com/get-started/your-authtoken
+Numbers API: https://www.numbersapi.com
 
 ## 🚀 Running the Application
 
