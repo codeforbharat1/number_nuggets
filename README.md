@@ -3,9 +3,9 @@ Its a chatbot that delivers a daily dose of number trivia, pulling facts from th
 
 # 🧩 Core Features
 ## 📬 Fun Fact of the day
-● Each morning or afternoon, the bot sends one captivating fact tied to a number.
+● Every day morning, the bot sends one captivating fact tied to the current day.
 ## 📬 Surprise me
-● User clicks on this button displayed on UI and the bot sends one captivating fact tied to a number.
+● User clicks on this button displayed on UI and the bot sends one captivating fact tied to a random number.
 ## 📬 Number Trivia
 ● User enters a number of his choice on UI and the bot sends one captivating fact tied to the number.
 
